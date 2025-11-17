@@ -6,14 +6,83 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B49437872ECAFDCB00EDBBAD /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B49437862ECAFDCB00EDBBAD /* WidgetKit.framework */; };
+		B49437892ECAFDCB00EDBBAD /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B49437882ECAFDCB00EDBBAD /* SwiftUI.framework */; };
+		B49437942ECAFDCD00EDBBAD /* TaskWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B49437842ECAFDCB00EDBBAD /* TaskWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B49437922ECAFDCD00EDBBAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B494376A2ECAFD1A00EDBBAD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B49437832ECAFDCB00EDBBAD;
+			remoteInfo = TaskWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B49437992ECAFDCD00EDBBAD /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B49437942ECAFDCD00EDBBAD /* TaskWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		B49437722ECAFD1A00EDBBAD /* TodoWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B49437842ECAFDCB00EDBBAD /* TaskWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TaskWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B49437862ECAFDCB00EDBBAD /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		B49437882ECAFDCB00EDBBAD /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B49437952ECAFDCD00EDBBAD /* Exceptions for "TaskWidget" folder in "TaskWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = B49437832ECAFDCB00EDBBAD /* TaskWidgetExtension */;
+		};
+		B49437A42ECAFFD200EDBBAD /* Exceptions for "TodoWidget" folder in "TaskWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				TaskModel.swift,
+			);
+			target = B49437832ECAFDCB00EDBBAD /* TaskWidgetExtension */;
+		};
+		B49437A82ECB07F100EDBBAD /* Exceptions for "TaskWidget" folder in "TodoWidget" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ToggleStateIntent.swift,
+			);
+			target = B49437712ECAFD1A00EDBBAD /* TodoWidget */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B49437742ECAFD1A00EDBBAD /* TodoWidget */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B49437A42ECAFFD200EDBBAD /* Exceptions for "TodoWidget" folder in "TaskWidgetExtension" target */,
+			);
 			path = TodoWidget;
+			sourceTree = "<group>";
+		};
+		B494378A2ECAFDCB00EDBBAD /* TaskWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B49437A82ECB07F100EDBBAD /* Exceptions for "TaskWidget" folder in "TodoWidget" target */,
+				B49437952ECAFDCD00EDBBAD /* Exceptions for "TaskWidget" folder in "TaskWidgetExtension" target */,
+			);
+			path = TaskWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +95,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B49437812ECAFDCB00EDBBAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B49437892ECAFDCB00EDBBAD /* SwiftUI.framework in Frameworks */,
+				B49437872ECAFDCB00EDBBAD /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				B49437742ECAFD1A00EDBBAD /* TodoWidget */,
+				B494378A2ECAFDCB00EDBBAD /* TaskWidget */,
+				B49437852ECAFDCB00EDBBAD /* Frameworks */,
 				B49437732ECAFD1A00EDBBAD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +121,18 @@
 			isa = PBXGroup;
 			children = (
 				B49437722ECAFD1A00EDBBAD /* TodoWidget.app */,
+				B49437842ECAFDCB00EDBBAD /* TaskWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B49437852ECAFDCB00EDBBAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B49437862ECAFDCB00EDBBAD /* WidgetKit.framework */,
+				B49437882ECAFDCB00EDBBAD /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +145,12 @@
 				B494376E2ECAFD1A00EDBBAD /* Sources */,
 				B494376F2ECAFD1A00EDBBAD /* Frameworks */,
 				B49437702ECAFD1A00EDBBAD /* Resources */,
+				B49437992ECAFDCD00EDBBAD /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B49437932ECAFDCD00EDBBAD /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				B49437742ECAFD1A00EDBBAD /* TodoWidget */,
@@ -69,6 +161,28 @@
 			productName = TodoWidget;
 			productReference = B49437722ECAFD1A00EDBBAD /* TodoWidget.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B49437832ECAFDCB00EDBBAD /* TaskWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B49437962ECAFDCD00EDBBAD /* Build configuration list for PBXNativeTarget "TaskWidgetExtension" */;
+			buildPhases = (
+				B49437802ECAFDCB00EDBBAD /* Sources */,
+				B49437812ECAFDCB00EDBBAD /* Frameworks */,
+				B49437822ECAFDCB00EDBBAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				B494378A2ECAFDCB00EDBBAD /* TaskWidget */,
+			);
+			name = TaskWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = TaskWidgetExtension;
+			productReference = B49437842ECAFDCB00EDBBAD /* TaskWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +195,9 @@
 				LastUpgradeCheck = 2610;
 				TargetAttributes = {
 					B49437712ECAFD1A00EDBBAD = {
+						CreatedOnToolsVersion = 26.1.1;
+					};
+					B49437832ECAFDCB00EDBBAD = {
 						CreatedOnToolsVersion = 26.1.1;
 					};
 				};
@@ -100,12 +217,20 @@
 			projectRoot = "";
 			targets = (
 				B49437712ECAFD1A00EDBBAD /* TodoWidget */,
+				B49437832ECAFDCB00EDBBAD /* TaskWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B49437702ECAFD1A00EDBBAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B49437822ECAFDCB00EDBBAD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +247,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B49437802ECAFDCB00EDBBAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B49437932ECAFDCD00EDBBAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B49437832ECAFDCB00EDBBAD /* TaskWidgetExtension */;
+			targetProxy = B49437922ECAFDCD00EDBBAD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B494377B2ECAFD1C00EDBBAD /* Debug */ = {
@@ -310,6 +450,66 @@
 			};
 			name = Release;
 		};
+		B49437972ECAFDCD00EDBBAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D2R2MN4TCC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TaskWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TaskWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sajedshaikh.TodoWidget.TaskWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B49437982ECAFDCD00EDBBAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D2R2MN4TCC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TaskWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TaskWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sajedshaikh.TodoWidget.TaskWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -327,6 +527,15 @@
 			buildConfigurations = (
 				B494377E2ECAFD1C00EDBBAD /* Debug */,
 				B494377F2ECAFD1C00EDBBAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B49437962ECAFDCD00EDBBAD /* Build configuration list for PBXNativeTarget "TaskWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B49437972ECAFDCD00EDBBAD /* Debug */,
+				B49437982ECAFDCD00EDBBAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
