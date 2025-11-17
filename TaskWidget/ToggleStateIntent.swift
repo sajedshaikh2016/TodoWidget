@@ -13,19 +13,19 @@ struct ToggleStateIntent: AppIntent {
     static var title: LocalizedStringResource = "Toggle Task State"
     
     @Parameter(title: "Task ID")
-    var taskID: String
+    var id: String
     
     init() {
         
     }
     
-    init(taskID: String) {
-        self.taskID = taskID
+    init(id: String) {
+        self.id = id
     }
     
     func perform() async throws -> some IntentResult {
         /// Fetch the task using the taskID and toggle its state
-        if let index = TaskDataModel.shared.tasks.firstIndex(where: { $0.id == taskID }) {
+        if let index = await TaskDataModel.shared.tasks.firstIndex(where: { $0.id == id }) {
             TaskDataModel.shared.tasks[index].isCompleted.toggle()
             print("completed")
         }

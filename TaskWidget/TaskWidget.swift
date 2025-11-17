@@ -58,7 +58,7 @@ struct TaskWidgetEntryView : View {
                         $0.isCompleted && !$1.isCompleted
                     }) { task in
                         HStack(spacing: 6) {
-                            Button(intent: ToggleStateIntent(taskID: task.id)) {
+                            Button(intent: ToggleStateIntent(id: task.id)) {
                                 Image(systemName: task.isCompleted ? "checkmark.circle.fill" : "circle")
                                     .foregroundColor(task.isCompleted ? .green : .gray)
                             }
